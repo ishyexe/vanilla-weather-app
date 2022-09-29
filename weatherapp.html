@@ -9,8 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="src/script.js" defer></script>
     <script
       src="https://kit.fontawesome.com/63adeefb61.js"
       crossorigin="anonymous"
@@ -19,14 +19,6 @@
 
   <body>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
-      function showUser(response) {
-        alert(`The user name is ${response.data.name}`);
-      }
-
-      let url = "https://jsonplaceholder.typicode.com/users/1";
-      axios.get(url).then(showUser);
-    </script>
     <div class="card">
       <div class="search">
         <input type="text" class="search-bar" placeholder="Search" />
