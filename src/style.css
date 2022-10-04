@@ -85,3 +85,15 @@ h1.temp {
   top: 0;
   left: 20px;
 }
+.weather-forecast {
+  margin-top: 20px;
+}
+.forecast-temp {
+  font-size: small;
+  font-family: "Open Sans", sans-serif;
+}
+
+.date {
+  font-size: medium;
+  font-family: "Open Sans", sans-serif;
+}
