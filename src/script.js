@@ -33,6 +33,7 @@ let weather = {
     document.querySelector(".weather").classList.remove("loading");
     document.body.style.backgroundImage =
       "url('https://source.unsplash.com/1600x900/?" + name + "')";
+    getForecast(data.coord);
   },
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
@@ -53,10 +54,10 @@ document
 
 weather.fetchWeather("Denver");
 
-$("#desc").html("Sky: " + data.weather[0].description);
-var fahr = data.main.temp + " °F";
-var cels = ((data.main.temp - 32) * 5) / 9 + " °C";
-$("#temp").html(fahr);
+// $("#desc").html("Sky: " + data.weather[0].description);
+// var fahr = data.main.temp + " °F";
+// var cels = ((data.main.temp - 32) * 5) / 9 + " °C";
+// $("#temp").html(fahr);
 
 function getForecast(coordinates) {
   console.log(coordinates);
@@ -77,7 +78,7 @@ function showForecast(response) {
         forecastHTML +
         `
         <div class="forecast-division row">
-          <div class="forecast-date col-4">${formatDay(forecastDay.dt)}</div>
+          <div class="forecast-date col-4"></div>
           <img src="emoji/${forecastDay.weather[0].icon}.png" alt="${
           forecastDay.weather[0].description
         }" class="forecast-icon col4" />
